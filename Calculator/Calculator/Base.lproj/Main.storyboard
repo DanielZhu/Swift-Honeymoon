@@ -97,13 +97,6 @@
                                     <action selector="digitButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Oga-dn-n7Q"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="QeM-ZL-2sN">
-                                <rect key="frame" x="63" y="159" width="151" height="43"/>
-                                <color key="backgroundColor" red="0.95930824735142284" green="0.96810924044639002" blue="0.96810924044639002" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="npn-3d-rTU">
                                 <rect key="frame" x="10" y="210" width="45" height="45"/>
                                 <color key="backgroundColor" red="0.94634214079822276" green="0.95502417878719725" blue="0.95502417878719725" alpha="1" colorSpace="calibratedRGB"/>
@@ -112,6 +105,29 @@
                                     <action selector="performOperator:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c6g-kp-7dO"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HVD-Am-rks">
+                                <rect key="frame" x="10" y="316" width="45" height="45"/>
+                                <color key="backgroundColor" red="0.94634214080000001" green="0.95502417880000001" blue="0.95502417880000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="√"/>
+                                <connections>
+                                    <action selector="performOperator:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oVO-o4-cDt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XLI-5W-fs9">
+                                <rect key="frame" x="10" y="263" width="45" height="45"/>
+                                <color key="backgroundColor" red="0.94634214080000001" green="0.95502417880000001" blue="0.95502417880000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="e"/>
+                                <connections>
+                                    <action selector="performOperator:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DEY-dB-POK"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="QeM-ZL-2sN">
+                                <rect key="frame" x="10" y="159" width="204" height="43"/>
+                                <color key="backgroundColor" red="0.021419954434374514" green="0.68825488465524054" blue="0.96810924044639002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.99090909090909096" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>

@@ -9,20 +9,20 @@
 import UIKit
 
 class ViewController: UIViewController {
-//
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        // Do any additional setup after loading the view, typically from a nib.
-//    }
-//
-//    override func didReceiveMemoryWarning() {
-//        super.didReceiveMemoryWarning()
-//        // Dispose of any resources that can be recreated.
-//    }
-//
+    var calcBrain = CalcBrain()
+    
     var userInsertDigitFromMiddle = false
     
     @IBOutlet weak var display: UILabel!
+    
+    var displayValue: Double {
+        get {
+            return Double(display.text!)!
+        }
+        set {
+            display.text = String(newValue)
+        }
+    }
     
     @IBAction func digitButton(sender: UIButton) {
         let digit = sender.currentTitle!
@@ -36,11 +36,13 @@ class ViewController: UIViewController {
             }
             userInsertDigitFromMiddle = true
         }
+        calcBrain.accumulator = displayValue
 //        print("Touched \(digit) digit")
     }
     
     @IBAction func performOperator(sender: UIButton) {
-        display.text = String(M_PI)
+        displayValue = calcBrain.performOperator(sender.currentTitle!)
+
         userInsertDigitFromMiddle = false
     }
 }
