@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
   
+  @IBOutlet weak var stepsLabel: UILabel!
   @IBOutlet private weak var displayLabel: UILabel!
   
   var isUserInputInMiddle = false
@@ -53,5 +54,20 @@ class ViewController: UIViewController {
     
     brain.performOperation(symbol: sender.currentTitle!)
     displayValue = brain.result
+    
+    var steps: String = ""
+    
+    for step in brain.histories {
+      switch step {
+      case let item as String:
+        steps += item
+      case let item as Double:
+        steps += String(item)
+      default:
+        break;
+      }
+    }
+    
+    stepsLabel.text = steps
   }
 }

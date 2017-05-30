@@ -12,9 +12,11 @@ class CalculatorBrain {
   
   private var pending: pendingBinaryOperationInfo?
   private var accumulator = 0.0
+  private var stepsHistory: [AnyObject] = []
   
   func setOperand(operand: Double) {
     accumulator = operand
+    stepsHistory.append(operand as AnyObject)
   }
   
   enum Operation {
@@ -46,6 +48,8 @@ class CalculatorBrain {
   }
   
   func performOperation(symbol: String) {
+    stepsHistory.append(symbol as AnyObject)
+
     if let operation = operations[symbol] {
       switch operation {
       case .Constant(let value):
@@ -80,6 +84,11 @@ class CalculatorBrain {
     var firstOperand: Double
   }
   
+  var histories: [AnyObject] {
+    get {
+      return stepsHistory
+    }
+  }
   var result: Double {
     get {
       return accumulator
